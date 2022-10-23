@@ -58,6 +58,8 @@ Links:
 
 • [Telegram - Mining](https://t.me/FennecMiningPortal)
 
+• [Discord](https://discord.gg/HUepGGUKW4)
+
 • [Explorer](/) (soon)
 
 • [Website](https://fennecblockchain.com/) (soon)
