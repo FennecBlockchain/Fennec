@@ -69,6 +69,9 @@ Links:
 
 ---
 
+![](share/pixmaps/splashscreen_github_1280_2.png)
+
+
 License
 -------
 
