@@ -50,7 +50,9 @@ Specifications:
 Links:
 ==================
 
-• [Telegram](https://t.me/FennecPortal)
+• [Telegram - Official](https://t.me/FennecPortal)
+
+• [Telegram - Mining](https://t.me/FennecMiningPortal)
 
 • [Explorer](/) (soon)
 
