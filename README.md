@@ -4,39 +4,11 @@
 Specifications:
 ==================
 
-• Name:               Fennec
+![](share/pixmaps/specs.png)
 
-• Ticker:             FNNC
-
-• Blockain type:      Proof of Work (PoW)
-
-• Mining algorithm:   SHA-256
-
-• Block reward:       50 FNNC
-
-• P2P Port:           8338
-
-• RPC Port:           8339
-
-• Block Size:         4MB
-
-• Block Time:         10 minutes
-
-• Difficulty Time:    1 block
 
 ---
 
-
-
-
-
-• Premine:          2 100 000 FNNC
-
-• Maturity:         100 Confirmations  
-
-• Max Supply:       21 000 000 FNNC
-
----
 
 • 51% attacks resistant
 
@@ -50,6 +22,15 @@ Specifications:
 
 
 ---
+
+Reward Table:
+==================
+
+![](share/pixmaps/reward_tabl3.png)
+
+
+
+
 
 Links:
 ==================
