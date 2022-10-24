@@ -1,4 +1,4 @@
-![](share/pixmaps/splashscreen_white_1024.png)
+![](share/pixmaps/splashscreen_github_3500_2.png)
 
 
 Specifications:
@@ -50,7 +50,7 @@ Links:
 
 ---
 
-![](share/pixmaps/splashscreen_github_1280_2.png)
+![](share/pixmaps/splashscreen_coming-soon_white_3500.jpg)
 
 
 License
