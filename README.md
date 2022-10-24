@@ -16,8 +16,6 @@ Specifications:
 
 • Prefix: FNNC adresses start with "F"  
 
-• Halving time: every 189 055 blocks – 3.6 years approximately
-
 • Uses the "FennecDifficulty" (FD) difficulty algorithm for a more stable POW mining on the network
 
 
