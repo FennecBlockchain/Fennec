@@ -24,7 +24,7 @@ Specifications:
 Reward Table:
 ==================
 
-![](share/pixmaps/reward_tabl3.jpg)
+![](share/pixmaps/reward_table3.jpg)
 
 
 
