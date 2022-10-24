@@ -4,7 +4,7 @@
 Specifications:
 ==================
 
-![](share/pixmaps/specs.png)
+![](share/pixmaps/specs.jpg)
 
 
 ---
@@ -24,7 +24,7 @@ Specifications:
 Reward Table:
 ==================
 
-![](share/pixmaps/reward_tabl3.png)
+![](share/pixmaps/reward_tabl3.jpg)
 
 
 
