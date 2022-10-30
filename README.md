@@ -24,7 +24,7 @@ Specifications:
 Reward Table:
 ==================
 
-![](share/pixmaps/Fennec-Reward-Table_07.png)
+![](share/pixmaps/Fennec-Reward-Table_07.jpg)
 
 
 
