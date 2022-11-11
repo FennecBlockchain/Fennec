@@ -33,6 +33,8 @@ Reward Table:
 Links:
 ==================
 
+• [Website](https://fennecblockchain.com/)
+
 • [Telegram - Official](https://t.me/FennecPortal)
 
 • [Telegram - Mining](https://t.me/FennecMiningPortal)
@@ -40,8 +42,6 @@ Links:
 • [Discord](https://discord.gg/HUepGGUKW4)
 
 • [Explorer](/) (soon)
-
-• [Website](https://fennecblockchain.com/) (soon)
 
 • [Web Wallet](https://fennecwallet.com) (soon)
 
