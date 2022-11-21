@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[bitcoin.qt-translation-019x]
+file_filter = fennec/qt/locale/bitcoin_<lang>.ts
+source_file = fennec/qt/locale/bitcoin_en.ts
+source_lang = en
