@@ -1,4 +1,4 @@
-﻿![](share/pixmaps/splashscreen_github_2048_3.png)
+![](share/pixmaps/splashscreen_github_2048_3.png)
 
 
 Specifications:
