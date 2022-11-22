@@ -1,4 +1,4 @@
-![](share/pixmaps/splashscreen_github_2048_3.png)
+﻿![](share/pixmaps/splashscreen_github_2048_3.png)
 
 
 Specifications:
@@ -41,11 +41,13 @@ Links:
 
 • [Discord](https://discord.gg/HUepGGUKW4)
 
-• [Explorer](/) (soon)
+• [Explorer](https://scan.fennecblockchain.com/)
+
+• [Mining Pool](https://mine.fennecblockchain.com)
 
 • [Web Wallet](https://fennecwallet.com) (soon)
 
-• [Mining Pool](https://mine.fennecblockchain.com) (soon)
+
 
 
 ---
