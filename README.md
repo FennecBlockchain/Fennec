@@ -52,7 +52,6 @@ Links:
 
 ---
 
-![](share/pixmaps/splashscreen_coming-soon_white_3500.jpg)
 
 
 License
