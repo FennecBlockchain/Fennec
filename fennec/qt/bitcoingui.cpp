@@ -424,7 +424,7 @@ void BitcoinGUI::createMenuBar()
 #else
     // Get the main window's menu bar on other platforms
     appMenuBar = menuBar();
-    appMenuBar->setStyleSheet("QMenuBar { background-color: #0B0B0B; font-weight:normal; text-align:center; font-family: Arial, sans-recif; font-size: 10px; text-transform: uppercase; color: #C0C0C0;} QMenuBar::item:selected { background-color: #141413;} QMenu { background-color: #111111; font-weight:normal; text-align:center; font-family: Arial, sans-recif; font-size: 10px; text-transform: uppercase; color: #C0C0C0;} QMenu::item:selected { background-color: #131313;}");
+    appMenuBar->setStyleSheet("QMenuBar { background-color: #0B0B0B; font-weight:normal; text-align:center; font-family: Arial, sans-recif; font-size: 10px; text-transform: uppercase; color: #C0C0C0;} QMenuBar::item:selected { background-color: #141413;} QMenu { background-color: #111111; font-weight:normal; text-align:center; font-family: Arial, sans-recif; font-size: 10px; text-transform: uppercase; color: #C0C0C0;} QMenu::item:selected { background-color: rgba(3, 70, 130, 0.2);}");
 #endif
 
     // Configure the menus
@@ -469,7 +469,8 @@ void BitcoinGUI::createMenuBar()
         QWindow* window = qApp->focusWindow();
         if (window->windowState() != Qt::WindowMaximized) {
             window->showMaximized();
-        } else {
+        }
+	else {
             window->showNormal();
         }
     });
@@ -515,10 +516,12 @@ void BitcoinGUI::createToolBars()
         QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
         appToolBar = toolbar;
 #ifdef Q_OS_MAC
-    	toolbar->setStyleSheet("QToolBar::item:selected { background-color: #0D0D0D;} QToolButton { min-height: 50px; min-width: 155px; font-weight:normal; font-family: Arial, sans-recif; font-size: 12px; text-transform: uppercase; color: #0B0B0B; margin-left:20px; margin-right:20px; } ");
+    	toolbar->setStyleSheet("QToolBar::item:selected { background-color: ;} QToolButton { min-height: 50px; min-width: 155px; font-weight:normal; font-family: Arial, sans-recif; font-size: 12px; text-transform: uppercase; color: #0B0B0B; margin-left:20px; margin-right:20px; } ");
 #else
     	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; min-height: 50px; }  QToolButton:!hover { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(100, 100, 100, 0); margin-left:22px; margin-right:22px; } QToolButton:hover { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(3, 70, 130, 0.5); margin-left:22px; margin-right:22px; } QToolButton:checked { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(3, 70, 130, 0.5); margin-left:22px; margin-right:22px; } ");
 #endif
+	toolbar->setLayoutDirection(Qt::LeftToRight);
+
         toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
         toolbar->setMovable(false);
         toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
