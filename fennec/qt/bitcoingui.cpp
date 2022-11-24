@@ -235,14 +235,22 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(platformStyle->SingleColorIcon(":/icons/overview"), tr("&Overview"), this);
+#ifdef Q_OS_MAC
+    overviewAction = new QAction(platformStyle->SingleColorIcon(":/icons/overview2"), tr(""), this);
+#else
+    overviewAction = new QAction(platformStyle->SingleColorIcon(":/icons/overview"), tr(""), this);
+#endif
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/send"), tr("&Send"), this);
+#ifdef Q_OS_MAC
+    sendCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/send2"), tr(""), this);
+#else
+    sendCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/send"), tr(""), this);
+#endif
     sendCoinsAction->setStatusTip(tr("Send coins to a Fennec address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
@@ -253,7 +261,11 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setStatusTip(sendCoinsAction->statusTip());
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
-    receiveCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
+#ifdef Q_OS_MAC
+    receiveCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/receive2"), tr(""), this);
+#else
+    receiveCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/receiving_addresses"), tr(""), this);
+#endif
     receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and fennec: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
@@ -264,7 +276,11 @@ void BitcoinGUI::createActions()
     receiveCoinsMenuAction->setStatusTip(receiveCoinsAction->statusTip());
     receiveCoinsMenuAction->setToolTip(receiveCoinsMenuAction->statusTip());
 
-    historyAction = new QAction(platformStyle->SingleColorIcon(":/icons/history"), tr("&Transactions"), this);
+#ifdef Q_OS_MAC
+    historyAction = new QAction(platformStyle->SingleColorIcon(":/icons/history2"), tr(""), this);
+#else
+    historyAction = new QAction(platformStyle->SingleColorIcon(":/icons/history"), tr(""), this);
+#endif
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
@@ -516,15 +532,15 @@ void BitcoinGUI::createToolBars()
         QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
         appToolBar = toolbar;
 #ifdef Q_OS_MAC
-    	toolbar->setStyleSheet("QToolBar::item:selected { background-color: ;} QToolButton { min-height: 50px; min-width: 155px; font-weight:normal; font-family: Arial, sans-recif; font-size: 12px; text-transform: uppercase; color: #0B0B0B; margin-left:20px; margin-right:20px; } ");
+    	toolbar->setStyleSheet("QToolBar { max-height: 60px; } QToolButton:!hover { background-color: rgba(100, 100, 100, 0); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:hover { background-color: rgba(50, 50, 50, 0.1); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:checked {  background-color: rgba(50, 50, 50, 0.2); min-width: 40px; margin-left:20px; margin-right:20px; } ");
 #else
-    	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; min-height: 50px; }  QToolButton:!hover { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(100, 100, 100, 0); margin-left:22px; margin-right:22px; } QToolButton:hover { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(3, 70, 130, 0.5); margin-left:22px; margin-right:22px; } QToolButton:checked { min-height: 50px; min-width: 160px; font-weight:normal; font-family: Arial, sans-recif; font-size: 11px; text-transform: uppercase; color: #DCDCDC; background-color: rgba(3, 70, 130, 0.5); margin-left:22px; margin-right:22px; } ");
-#endif
-	toolbar->setLayoutDirection(Qt::LeftToRight);
+    	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; max-height: 60px; } QToolButton:!hover { background-color: rgba(100, 100, 100, 0); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:hover { background-color: rgba(3, 70, 130, 0.5); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:checked {  background-color: rgba(3, 70, 130, 0.5); min-width: 40px; margin-left:20px; margin-right:20px; } ");
 
+#endif
+	toolbar->setIconSize(QSize(492, 125));
         toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
         toolbar->setMovable(false);
-        toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+//        toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         toolbar->addAction(overviewAction);
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
