@@ -89,10 +89,16 @@
          <number>0</number>
         </property>
         <property name="leftMargin">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="topMargin">
-         <number>0</number>
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
         </property>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayoutCoinControl1">
@@ -133,12 +139,18 @@
           </property>
           <item>
            <widget class="QPushButton" name="pushButtonCoinControl">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(140, 140, 140);
 background-color: rgb(20, 20, 20);</string>
             </property>
             <property name="text">
              <string>Inputs...</string>
+            </property>
+            <property name="shortcut">
+             <string comment="0"/>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -683,8 +695,8 @@ background-color: rgb(26, 26, 26);</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>848</width>
-        <height>130</height>
+        <width>830</width>
+        <height>68</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
@@ -1256,6 +1268,21 @@ background-color: rgb(26, 26, 26);</string>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
      <item>
       <widget class="QPushButton" name="sendButton">
        <property name="minimumSize">
