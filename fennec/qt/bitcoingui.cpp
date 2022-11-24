@@ -304,34 +304,86 @@ void BitcoinGUI::createActions()
     connect(historyAction, &QAction::triggered, this, &BitcoinGUI::gotoHistoryPage);
 #endif // ENABLE_WALLET
 
+#ifdef Q_OS_MAC
+    quitAction = new QAction(QIcon(":/icons/quit2"), tr("E&xit"), this);
+#else
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
+#endif
+
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/16"), tr("&About %1").arg(PACKAGE_NAME), this);
+
+#ifdef Q_OS_MAC
+    aboutAction = new QAction(QIcon(":/icons/about2"), tr("&About %1").arg(PACKAGE_NAME), this);
+#else
+    aboutAction = new QAction(QIcon(":/icons/about"), tr("&About %1").arg(PACKAGE_NAME), this);
+#endif
+
     aboutAction->setStatusTip(tr("Show information about %1").arg(PACKAGE_NAME));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutAction->setEnabled(false);
+
+#ifdef Q_OS_MAC
+    aboutQtAction = new QAction(QIcon(":/icons/about_qt2"), tr("About &Qt"), this);
+#else
     aboutQtAction = new QAction(QIcon(":/icons/about_qt"), tr("About &Qt"), this);
+#endif
+
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
+
+#ifdef Q_OS_MAC
+    optionsAction = new QAction(QIcon(":/icons/configure2"), tr("&Options..."), this);
+#else
     optionsAction = new QAction(QIcon(":/icons/configure"), tr("&Options..."), this);
+#endif
+
     optionsAction->setStatusTip(tr("Modify configuration options for %1").arg(PACKAGE_NAME));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     optionsAction->setEnabled(false);
+
+#ifdef Q_OS_MAC
+    toggleHideAction = new QAction(QIcon(":/icons/add2"), tr("&Show / Hide"), this);
+#else
     toggleHideAction = new QAction(QIcon(":/icons/add"), tr("&Show / Hide"), this);
+#endif
+
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
     encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
     encryptWalletAction->setCheckable(true);
+
+#ifdef Q_OS_MAC
+    backupWalletAction = new QAction(QIcon(":/icons/filesave2"), tr("&Backup Wallet..."), this);
+#else
     backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Backup Wallet..."), this);
+#endif
+
     backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
+
+#ifdef Q_OS_MAC
+    changePassphraseAction = new QAction(QIcon(":/icons/key2"), tr("&Change Passphrase..."), this);
+#else
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
+#endif
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
+
+#ifdef Q_OS_MAC
+    signMessageAction = new QAction(QIcon(":/icons/edit2"), tr("Sign &message..."), this);
+#else
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
+#endif
+
     signMessageAction->setStatusTip(tr("Sign messages with your Fennec addresses to prove you own them"));
+
+#ifdef Q_OS_MAC
+    verifyMessageAction = new QAction(QIcon(":/icons/transaction_02"), tr("&Verify message..."), this);
+#else
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
+#endif
+
     verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Fennec addresses"));
 
     openRPCConsoleAction = new QAction(QIcon(":/icons/debug_window"), tr("&Debug window"), this);
@@ -340,27 +392,63 @@ void BitcoinGUI::createActions()
     openRPCConsoleAction->setEnabled(false);
     openRPCConsoleAction->setObjectName("openRPCConsoleAction");
 
+#ifdef Q_OS_MAC
+    usedSendingAddressesAction = new QAction(QIcon(":/icons/address-book2"), tr("&Sending addresses"), this);
+#else
     usedSendingAddressesAction = new QAction(QIcon(":/icons/address-book"), tr("&Sending addresses"), this);
+#endif
+
     usedSendingAddressesAction->setStatusTip(tr("Show the list of used sending addresses and labels"));
+
+#ifdef Q_OS_MAC
+    usedReceivingAddressesAction = new QAction(QIcon(":/icons/address-book2"), tr("&Receiving addresses"), this);
+#else
     usedReceivingAddressesAction = new QAction(QIcon(":/icons/address-book"), tr("&Receiving addresses"), this);
+#endif
+
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
+#ifdef Q_OS_MAC
+    openAction = new QAction(QIcon(":/icons/open2"), tr("Open &URI..."), this);
+#else
     openAction = new QAction(QIcon(":/icons/open"), tr("Open &URI..."), this);
+#endif
+
     openAction->setStatusTip(tr("Open a fennec: URI or payment request"));
 
+
+#ifdef Q_OS_MAC
+    m_open_wallet_action = new QAction(QIcon(":/icons/open2"), tr("Open Wallet"), this);
+#else
     m_open_wallet_action = new QAction(QIcon(":/icons/open"), tr("Open Wallet"), this);
+#endif
+
     m_open_wallet_action->setEnabled(false);
     m_open_wallet_action->setStatusTip(tr("Open a wallet"));
     m_open_wallet_menu = new QMenu(this);
 
+#ifdef Q_OS_MAC
+    m_close_wallet_action = new QAction(QIcon(":/icons/remove2"), tr("Close Wallet..."), this);
+#else
     m_close_wallet_action = new QAction(QIcon(":/icons/remove"), tr("Close Wallet..."), this);
+#endif
     m_close_wallet_action->setStatusTip(tr("Close wallet"));
 
+#ifdef Q_OS_MAC
+    m_create_wallet_action = new QAction(QIcon(":/icons/add2"), tr("Create Wallet..."), this);
+#else
     m_create_wallet_action = new QAction(QIcon(":/icons/add"), tr("Create Wallet..."), this);
+#endif
+
     m_create_wallet_action->setEnabled(false);
     m_create_wallet_action->setStatusTip(tr("Create a new wallet"));
 
+#ifdef Q_OS_MAC
+    showHelpMessageAction = new QAction(QIcon(":/icons/info2"), tr("&Command-line options"), this);
+#else
     showHelpMessageAction = new QAction(QIcon(":/icons/info"), tr("&Command-line options"), this);
+#endif
+
     showHelpMessageAction->setMenuRole(QAction::NoRole);
     showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Fennec command-line options").arg(PACKAGE_NAME));
 
@@ -1250,7 +1338,13 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Unlocked:
         labelWalletEncryptionIcon->show();
+
+#ifdef Q_OS_MAC
+        labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_open2").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+#else
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+#endif
+
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
@@ -1258,7 +1352,13 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Locked:
         labelWalletEncryptionIcon->show();
+
+#ifdef Q_OS_MAC
+        labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_closed2").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+#else
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+#endif
+
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);

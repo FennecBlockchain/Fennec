@@ -172,6 +172,7 @@ RES_ICONS = \
   qt/res/icons/add.png \
   qt/res/icons/add_2.png \
   qt/res/icons/address-book.png \
+  qt/res/icons/address-book_2.png \
   qt/res/icons/bitcoin.ico \
   qt/res/icons/bitcoin_testnet.ico \
   qt/res/icons/bitcoin.png \

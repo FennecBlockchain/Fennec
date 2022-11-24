@@ -6,6 +6,7 @@
         <file alias="about_qt2">res/icons/about_qt_2.png</file>
         <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
+        <file alias="address-book2">res/icons/address-book_2.png</file>
         <file alias="send">res/icons/send.png</file>
         <file alias="configure">res/icons/configure.png</file>
         <file alias="configure2">res/icons/configure_2.png</file>
