@@ -514,7 +514,11 @@ void BitcoinGUI::createToolBars()
     {
         QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
         appToolBar = toolbar;
+#ifdef Q_OS_MAC
+    	toolbar->setStyleSheet("QToolBar::item:selected { background-color: #0D0D0D;} QToolButton { min-height: 50px; min-width: 155px; font-weight:normal; font-family: Arial, sans-recif; font-size: 12px; text-transform: uppercase; color: #0B0B0B; margin-left:20px; margin-right:20px; } ");
+#else
     	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; min-height: 50px; } QToolBar::item:selected { background-color: #0D0D0D;} QToolButton { min-height: 50px; min-width: 135px; font-weight:normal; font-family: Arial, sans-recif; font-size: 14px; text-transform: uppercase; color: #DCDCDC; margin-left:33px; margin-right:33px; } QToolButton::item:selected { background-color: #0D0D0D;} QLabel::item:selected { background-color: #0D0D0D;}");
+#endif
         toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
         toolbar->setMovable(false);
         toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
