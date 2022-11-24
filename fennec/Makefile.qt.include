@@ -165,8 +165,12 @@ BITCOIN_QT_H = \
   qt/winshutdownmonitor.h
 
 RES_ICONS = \
+  qt/res/icons/about.png \
+  qt/res/icons/about_2.png \
+  qt/res/icons/about_qt_2.png \
   qt/res/icons/about_qt.png \
   qt/res/icons/add.png \
+  qt/res/icons/add_2.png \
   qt/res/icons/address-book.png \
   qt/res/icons/bitcoin.ico \
   qt/res/icons/bitcoin_testnet.ico \
@@ -178,6 +182,7 @@ RES_ICONS = \
   qt/res/icons/clock4.png \
   qt/res/icons/clock5.png \
   qt/res/icons/configure.png \
+  qt/res/icons/configure_2.png \
   qt/res/icons/connect0.png \
   qt/res/icons/connect1.png \
   qt/res/icons/connect2.png \
@@ -185,6 +190,7 @@ RES_ICONS = \
   qt/res/icons/connect4.png \
   qt/res/icons/debugwindow.png \
   qt/res/icons/edit.png \
+  qt/res/icons/edit_2.png \
   qt/res/icons/editcopy.png \
   qt/res/icons/editpaste.png \
   qt/res/icons/export.png \
@@ -192,22 +198,30 @@ RES_ICONS = \
   qt/res/icons/eye_minus.png \
   qt/res/icons/eye_plus.png \
   qt/res/icons/filesave.png \
+  qt/res/icons/filesave_2.png \
   qt/res/icons/fontbigger.png \
   qt/res/icons/fontsmaller.png \
   qt/res/icons/hd_disabled.png \
   qt/res/icons/hd_enabled.png \
   qt/res/icons/history.png \
   qt/res/icons/info.png \
+  qt/res/icons/info_2.png \
   qt/res/icons/key.png \
+  qt/res/icons/key_2.png \
   qt/res/icons/lock_closed.png \
+  qt/res/icons/lock_closed_2.png \
   qt/res/icons/lock_open.png \
+  qt/res/icons/lock_open_2.png \
   qt/res/icons/network_disabled.png \
   qt/res/icons/open.png \
+  qt/res/icons/open_2.png \
   qt/res/icons/overview.png \
   qt/res/icons/proxy.png \
   qt/res/icons/quit.png \
+  qt/res/icons/quit_2.png \
   qt/res/icons/receive.png \
   qt/res/icons/remove.png \
+  qt/res/icons/remove_2.png \
   qt/res/icons/send.png \
   qt/res/icons/splashscreen.png \
   qt/res/icons/overview_background.png \
@@ -216,6 +230,7 @@ RES_ICONS = \
   qt/res/icons/synced.png \
   qt/res/icons/top_toolbar.png \
   qt/res/icons/transaction0.png \
+  qt/res/icons/transaction0_2.png \
   qt/res/icons/transaction2.png \
   qt/res/icons/transaction_abandoned.png \
   qt/res/icons/transaction_conflicted.png \
