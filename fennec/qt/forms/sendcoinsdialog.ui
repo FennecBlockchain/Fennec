@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>832</width>
-    <height>488</height>
+    <height>523</height>
    </rect>
   </property>
   <property name="font">
@@ -695,7 +695,7 @@
         <x>0</x>
         <y>0</y>
         <width>832</width>
-        <height>68</height>
+        <height>80</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
@@ -773,7 +773,7 @@ border: 0;</string>
        <number>20</number>
       </property>
       <property name="bottomMargin">
-       <number>20</number>
+       <number>0</number>
       </property>
       <item>
        <layout class="QVBoxLayout" name="verticalLayoutFee2" stretch="0,0,0">
