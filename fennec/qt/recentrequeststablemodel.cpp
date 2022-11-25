@@ -28,7 +28,7 @@ RecentRequestsTableModel::RecentRequestsTableModel(WalletModel *parent) :
     columns << tr("Date") << tr("Label") << tr("Message") << getAmountTitle();
 
     connect(walletModel->getOptionsModel(), &OptionsModel::displayUnitChanged, this, &RecentRequestsTableModel::updateDisplayUnit);
-  //  walletModel->getOptionsModel()("QLabel { background-color: #0B0B0B; }");
+  //  walletModel->setStyleSheet("QLabel { background-color: #0B0B0B; }");
 
 }
 

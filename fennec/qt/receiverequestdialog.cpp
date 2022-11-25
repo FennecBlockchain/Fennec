@@ -63,22 +63,22 @@ void ReceiveRequestDialog::update()
     setWindowTitle(tr("Request payment to %1").arg(target));
 
     QString uri = GUIUtil::formatBitcoinURI(info);
-    ui->btnSaveAs->setEnabled(false);
+    ui->btnSaveAs->setEnabled(true);
     QString html;
-    html += "<html><font face='verdana, arial, helvetica, sans-serif'>";
-    html += "<b>"+tr("Payment information")+"</b><br>";
-    html += "<b>"+tr("URI")+"</b>: ";
-    html += "<a href=\""+uri+"\">" + GUIUtil::HtmlEscape(uri) + "</a><br>";
-    html += "<b>"+tr("Address")+"</b>: " + GUIUtil::HtmlEscape(info.address) + "<br>";
-    if(info.amount)
+ //   html += "<html><font face='verdana, arial, helvetica, sans-serif'>";
+ //   html += "<b>"+tr("Payment information")+"</b><br>";
+ //   html += "<b>"+tr("URI")+"</b>: ";
+ //   html += "<a href=\""+uri+"\">" + GUIUtil::HtmlEscape(uri) + "</a><br>";
+    html +=  "<b><br><br><br>"+tr("Address")+"</b>: " + GUIUtil::HtmlEscape(info.address) + "<br>";
+ //   if(info.amount)
         html += "<b>"+tr("Amount")+"</b>: " + BitcoinUnits::formatHtmlWithUnit(model->getOptionsModel()->getDisplayUnit(), info.amount) + "<br>";
-    if(!info.label.isEmpty())
+ //   if(!info.label.isEmpty())
         html += "<b>"+tr("Label")+"</b>: " + GUIUtil::HtmlEscape(info.label) + "<br>";
-    if(!info.message.isEmpty())
+ //   if(!info.message.isEmpty())
         html += "<b>"+tr("Message")+"</b>: " + GUIUtil::HtmlEscape(info.message) + "<br>";
-    if(model->isMultiwallet()) {
+ //   if(model->isMultiwallet()) {
         html += "<b>"+tr("Wallet")+"</b>: " + GUIUtil::HtmlEscape(model->getWalletName()) + "<br>";
-    }
+  //  }
     ui->outUri->setText(html);
 
     if (ui->lblQRCode->setQR(uri, info.address)) {
