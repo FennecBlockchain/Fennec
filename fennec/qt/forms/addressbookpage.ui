@@ -126,7 +126,7 @@ background-image: url(:/icons/mrgrey);
         <string>Create a new address</string>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(49, 49, 49);</string>
        </property>
        <property name="text">
         <string>&amp;New</string>
@@ -155,7 +155,7 @@ background-image: url(:/icons/mrgrey);
         <string>Copy the currently selected address to the system clipboard</string>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(49, 49, 49);</string>
        </property>
        <property name="text">
         <string>&amp;Copy</string>
@@ -170,6 +170,9 @@ background-image: url(:/icons/mrgrey);
        <property name="default">
         <bool>false</bool>
        </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item>
@@ -178,7 +181,7 @@ background-image: url(:/icons/mrgrey);
         <string>Delete the currently selected address from the list</string>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(49, 49, 49);</string>
        </property>
        <property name="text">
         <string>&amp;Delete</string>
@@ -214,7 +217,7 @@ background-image: url(:/icons/mrgrey);
         <string>Export the data in the current tab to a file</string>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(49, 49, 49);</string>
        </property>
        <property name="text">
         <string>&amp;Export</string>
@@ -240,7 +243,7 @@ background-image: url(:/icons/mrgrey);
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(49, 49, 49);</string>
        </property>
        <property name="text">
         <string>C&amp;lose</string>

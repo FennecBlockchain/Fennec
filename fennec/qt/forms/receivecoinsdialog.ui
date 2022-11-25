@@ -14,7 +14,12 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0));</string>
+   <string notr="true">QLineEdit { border:0; }
+QFrame { border:0; }
+QLabel {border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); }
+
+
+</string>
   </property>
   <property name="pixmap">
    <pixmap resource="../bitcoin.qrc">:/icons/sendcoin_background</pixmap>
@@ -35,8 +40,7 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true"> border-bottom: 0px solid; border-top: 0px solid; 
-</string>
+      <string notr="true">QFrame { border:0; }</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -92,7 +96,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+background-color: rgb(26, 26, 26);
+
+</string>
           </property>
          </widget>
         </item>
@@ -102,7 +108,7 @@ background-color: rgb(26, 26, 26);</string>
            <string notr="true">color: rgb(140, 140, 140);</string>
           </property>
           <property name="text">
-           <string>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;All fields are &lt;span style=&quot; font-weight:600;&quot;&gt;optional&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -320,9 +326,10 @@ background-color: rgb(26, 26, 26);</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">border:0;
-color: rgb(170, 170, 170);
-\nbackground-color: rgb(26, 26, 26);</string>
+      <string notr="true">color: rgb(170, 170, 170);
+QFrame { border:0; }
+
+</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -332,7 +339,7 @@ color: rgb(170, 170, 170);
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="leftMargin">
-       <number>400</number>
+       <number>450</number>
       </property>
       <property name="topMargin">
        <number>20</number>
@@ -352,7 +359,9 @@ color: rgb(170, 170, 170);
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(140, 140, 140);</string>
+         <string notr="true">color: rgb(140, 140, 140);
+border:0;
+</string>
         </property>
         <property name="text">
          <string>Requested payments history</string>
@@ -366,7 +375,9 @@ color: rgb(170, 170, 170);
         </property>
         <property name="styleSheet">
          <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+background-image: url(:/icons/mrgrey);
+border:0;
+gridline-color: #252525;</string>
         </property>
         <property name="tabKeyNavigation">
          <bool>false</bool>
@@ -386,6 +397,9 @@ background-color: rgb(26, 26, 26);</string>
           <property name="toolTip">
            <string>Show the selected request (does the same as double clicking an entry)</string>
           </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(140, 140, 140);
 background-color: rgb(20, 20, 20);</string>
@@ -398,6 +412,9 @@ background-color: rgb(20, 20, 20);</string>
             <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
           </property>
           <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
            <bool>false</bool>
           </property>
          </widget>

@@ -17,7 +17,11 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">border:0;</string>
+   <string notr="true">QLineEdit { border: 0px; }
+QStackedWidget { border: 0px; }
+
+
+</string>
   </property>
   <widget class="QFrame" name="SendCoins">
    <property name="toolTip">
@@ -1354,15 +1358,15 @@ background-color: rgb(20, 20, 20);</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qt/qvalidatedlineedit.h</header>
-  </customwidget>
-  <customwidget>
    <class>BitcoinAmountField</class>
    <extends>QLineEdit</extends>
    <header>qt/bitcoinamountfield.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

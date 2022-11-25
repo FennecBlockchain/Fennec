@@ -57,6 +57,7 @@ ReceiveCoinsDialog::ReceiveCoinsDialog(const PlatformStyle *_platformStyle, QWid
 
     // context menu signals
     connect(ui->recentRequestsView, &QWidget::customContextMenuRequested, this, &ReceiveCoinsDialog::showMenu);
+    ui->recentRequestsView->setStyleSheet("gridline-color:#121213; background-color: #121213; border-color:#121213;");
     connect(copyURIAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyURI);
     connect(copyLabelAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyLabel);
     connect(copyMessageAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyMessage);
@@ -125,7 +126,9 @@ void ReceiveCoinsDialog::clear()
 {
     ui->reqAmount->clear();
     ui->reqLabel->setText("");
+    ui->reqLabel->setStyleSheet("border:0px; border-color:#000;");
     ui->reqMessage->setText("");
+    ui->reqMessage->setStyleSheet("border:0px;");
     updateDisplayUnit();
 }
 
