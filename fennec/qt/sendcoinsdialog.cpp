@@ -69,7 +69,7 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *_platformStyle, QWidget *p
     } else {
         ui->addButton->setIcon(_platformStyle->SingleColorIcon(":/icons/add"));
         ui->clearButton->setIcon(_platformStyle->SingleColorIcon(":/icons/remove"));
-        ui->sendButton->setIcon(_platformStyle->SingleColorIcon(":/icons/send"));
+        ui->sendButton->setIcon(_platformStyle->SingleColorIcon(":/icons/send0"));
     }
 
     GUIUtil::setupAddressWidget(ui->lineEditCoinControlChange, this);

@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>832</width>
-    <height>523</height>
+    <height>526</height>
    </rect>
   </property>
   <property name="font">
@@ -1323,15 +1323,14 @@ background-color: rgb(26, 26, 26);</string>
         <string>Confirm the send action</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(140, 140, 140);
-background-color: rgb(20, 20, 20);</string>
+        <string notr="true">color: rgb(140, 140, 140); background-color: rgb(20, 20, 20);</string>
        </property>
        <property name="text">
         <string>S&amp;end</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
+         <normaloff>:/icons/send0</normaloff>:/icons/send0</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -1353,8 +1352,7 @@ background-color: rgb(20, 20, 20);</string>
         <string>Clear all fields of the form.</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(140, 140, 140);
-background-color: rgb(20, 20, 20);</string>
+        <string notr="true">color: rgb(140, 140, 140); background-color: rgb(20, 20, 20);</string>
        </property>
        <property name="text">
         <string>Clear &amp;All</string>
@@ -1374,8 +1372,7 @@ background-color: rgb(20, 20, 20);</string>
         <string>Send to multiple recipients at once</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(140, 140, 140);
-background-color: rgb(20, 20, 20);</string>
+        <string notr="true">color: rgb(140, 140, 140); background-color: rgb(20, 20, 20);</string>
        </property>
        <property name="text">
         <string>Add &amp;Recipient</string>
