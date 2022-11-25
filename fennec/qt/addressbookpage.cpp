@@ -101,14 +101,14 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode _mode,
     switch(tab)
     {
     case SendingTab:
-        ui->labelExplanation->setText(tr("These are your Fennec addresses for sending payments. Always check the amount and the receiving address before sending coins."));
+ //       ui->labelExplanation->setText(tr("These are your Fennec addresses for sending payments. Always check the amount and the receiving address before sending coins."));
         ui->deleteAddress->setVisible(true);
         ui->newAddress->setVisible(true);
         break;
     case ReceivingTab:
-        ui->labelExplanation->setText(tr("These are your Fennec addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses."));
+//        ui->labelExplanation->setText(tr("These are your Fennec addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses."));
         ui->deleteAddress->setVisible(false);
-        ui->newAddress->setVisible(false);
+        ui->newAddress->setVisible(true);
         break;
     }
 
@@ -158,15 +158,21 @@ void AddressBookPage::setModel(AddressTableModel *_model)
     ui->tableView->setModel(proxyModel);
     ui->tableView->sortByColumn(0, Qt::AscendingOrder);
 
+    ui->tableView->setStyleSheet("gridline-color:#252525;");
+    ui->tableView->setAlternatingRowColors(false);
+    ui->tableView->horizontalHeader()->hide();
+    ui->tableView->verticalHeader()->hide();
+
     // Set column widths
-    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Label, QHeaderView::Stretch);
-    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Address, QHeaderView::ResizeToContents);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Label, QHeaderView::ResizeToContents);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Address, QHeaderView::Stretch);
 
     connect(ui->tableView->selectionModel(), &QItemSelectionModel::selectionChanged,
         this, &AddressBookPage::selectionChanged);
 
     // Select row for newly created address
-    connect(_model, &AddressTableModel::rowsInserted, this, &AddressBookPage::selectNewAddress);
+//    connect(_model, &AddressTableModel::rowsInserted, this, &AddressBookPage::selectNewAddress);
+    connect(_model, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(selectNewAddress(QModelIndex,int,int)));
 
     selectionChanged();
 }
@@ -202,6 +208,7 @@ void AddressBookPage::onEditAction()
     dlg.exec();
 }
 
+/**
 void AddressBookPage::on_newAddress_clicked()
 {
     if(!model)
@@ -211,7 +218,25 @@ void AddressBookPage::on_newAddress_clicked()
         return;
     }
 
-    EditAddressDialog dlg(EditAddressDialog::NewSendingAddress, this);
+  //  EditAddressDialog dlg(EditAddressDialog::NewSendingAddress, this);
+    EditAddressDialog::NewReceivingAddress, this);
+    dlg.setModel(model);
+    if(dlg.exec())
+    {
+        newAddressToSelect = dlg.getAddress();
+    }
+}
+*/
+
+void AddressBookPage::on_newAddress_clicked()
+{
+    if(!model)
+        return;
+
+    EditAddressDialog dlg(
+        tab == SendingTab ?
+        EditAddressDialog::NewSendingAddress :
+        EditAddressDialog::NewReceivingAddress, this);
     dlg.setModel(model);
     if(dlg.exec())
     {
