@@ -77,6 +77,7 @@
 	<file alias="history2">res/icons/history_2.png</file>
 	<file alias="send2">res/icons/send_2.png</file>
 	<file alias="receive2">res/icons/receive_2.png</file>
+	<file alias="mrgrey">res/icons/mrgrey.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
