@@ -57,7 +57,7 @@ ReceiveCoinsDialog::ReceiveCoinsDialog(const PlatformStyle *_platformStyle, QWid
 
     // context menu signals
     connect(ui->recentRequestsView, &QWidget::customContextMenuRequested, this, &ReceiveCoinsDialog::showMenu);
-    ui->recentRequestsView->setStyleSheet("gridline-color:#121213; background-color: #121213; border-color:#121213;");
+    ui->recentRequestsView->setStyleSheet("gridline-color:#121213; background-color: transparent; border-color:#121213;");
     connect(copyURIAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyURI);
     connect(copyLabelAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyLabel);
     connect(copyMessageAction, &QAction::triggered, this, &ReceiveCoinsDialog::copyMessage);
