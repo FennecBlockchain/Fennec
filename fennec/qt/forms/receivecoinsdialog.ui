@@ -156,7 +156,7 @@ background-color: rgb(26, 26, 26);</string>
 background-color: rgb(20, 20, 20);</string>
             </property>
             <property name="text">
-             <string>&amp;Create new receiving address</string>
+             <string>&amp;Create new address / payment</string>
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">
@@ -321,7 +321,8 @@ background-color: rgb(26, 26, 26);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">border:0;
-</string>
+color: rgb(170, 170, 170);
+\nbackground-color: rgb(26, 26, 26);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
