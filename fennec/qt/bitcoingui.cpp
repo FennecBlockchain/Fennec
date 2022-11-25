@@ -622,10 +622,10 @@ void BitcoinGUI::createToolBars()
 #ifdef Q_OS_MAC
     	toolbar->setStyleSheet("QToolBar { max-height: 60px; } QToolButton:!hover { background-color: rgba(100, 100, 100, 0); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:hover { background-color: rgba(50, 50, 50, 0.1); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:checked {  background-color: rgba(50, 50, 50, 0.2); min-width: 40px; margin-left:20px; margin-right:20px; } ");
 #else
-    	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; max-height: 60px; } QToolButton:!hover { background-color: rgba(100, 100, 100, 0); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:hover { background-color: rgba(3, 70, 130, 0.5); min-width: 40px; margin-left:20px; margin-right:20px; } QToolButton:checked {  background-color: rgba(3, 70, 130, 0.5); min-width: 40px; margin-left:20px; margin-right:20px; } ");
+    	toolbar->setStyleSheet("QToolBar { border-image: url(:/icons/toptoolbar) 0 0 0 0 stretch stretch; max-height: 60px; } QToolButton:!hover { background-color: rgba(100, 100, 100, 0); min-width: 10px; margin-left:20px; margin-right:20px; } QToolButton:hover { background-color: rgba(3, 70, 130, 0.5); min-width: 10px; margin-left:20px; margin-right:20px; } QToolButton:checked {  background-color: rgba(3, 70, 130, 0.5); min-width: 10px; margin-left:20px; margin-right:20px; } ");
 
 #endif
-	toolbar->setIconSize(QSize(492, 125));
+	toolbar->setIconSize(QSize(164, 41.7));
         toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
         toolbar->setMovable(false);
 //        toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);

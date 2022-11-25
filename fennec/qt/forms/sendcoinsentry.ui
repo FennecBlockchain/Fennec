@@ -17,21 +17,30 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#0B0B0B;</string>
+   <string notr="true">border:0;</string>
   </property>
   <widget class="QFrame" name="SendCoins">
    <property name="toolTip">
     <string>This is a normal payment.</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#0B0B0B;</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
     <property name="topMargin">
-     <number>8</number>
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
     </property>
     <property name="bottomMargin">
-     <number>4</number>
+     <number>9</number>
     </property>
     <property name="horizontalSpacing">
      <number>12</number>
@@ -66,8 +75,8 @@
          <string>Fennec address to send the payment to</string>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+         <string notr="true">color: rgb(200, 200, 200);
+</string>
         </property>
        </widget>
       </item>
@@ -161,8 +170,8 @@ background-color: rgb(26, 26, 26);</string>
        <string>Enter a label for this address to add it to the list of used addresses</string>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+       <string notr="true">color: rgb(200, 200, 200);
+background-color: #0B0B0B;</string>
       </property>
      </widget>
     </item>
@@ -187,8 +196,8 @@ background-color: rgb(26, 26, 26);</string>
       <item>
        <widget class="BitcoinAmountField" name="payAmount">
         <property name="styleSheet">
-         <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+         <string notr="true">background-color: #0B0B0B;
+color: rgb(255, 200, 0);</string>
         </property>
        </widget>
       </item>
@@ -392,6 +401,15 @@ background-color: rgb(20, 20, 20);</string>
         </color>
        </brush>
       </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
      </active>
      <inactive>
       <colorrole role="WindowText">
@@ -529,6 +547,15 @@ background-color: rgb(20, 20, 20);</string>
         </color>
        </brush>
       </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
      </inactive>
      <disabled>
       <colorrole role="WindowText">
@@ -660,6 +687,15 @@ background-color: rgb(20, 20, 20);</string>
       <colorrole role="ToolTipText">
        <brush brushstyle="SolidPattern">
         <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
          <red>0</red>
          <green>0</green>
          <blue>0</blue>
@@ -903,6 +939,15 @@ background-color: rgb(20, 20, 20);</string>
         </color>
        </brush>
       </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
      </active>
      <inactive>
       <colorrole role="WindowText">
@@ -1049,6 +1094,15 @@ background-color: rgb(20, 20, 20);</string>
         </color>
        </brush>
       </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
      </inactive>
      <disabled>
       <colorrole role="WindowText">
@@ -1189,6 +1243,15 @@ background-color: rgb(20, 20, 20);</string>
       <colorrole role="ToolTipText">
        <brush brushstyle="SolidPattern">
         <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="NoBrush">
+        <color alpha="128">
          <red>0</red>
          <green>0</green>
          <blue>0</blue>

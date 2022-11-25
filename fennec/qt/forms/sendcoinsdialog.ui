@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>832</width>
-    <height>485</height>
+    <height>488</height>
    </rect>
   </property>
   <property name="font">
@@ -22,7 +22,7 @@
    <string>Send Coins</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog { border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); background-color:#0B0B0B;  } 
+   <string notr="true">QDialog { border-bottom: 1.4px solid; border-top: 1.4px solid; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.8), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.8), stop: 1 rgba(10,10,10,1.0)); background-color:#0B0B0B; color: rgb(140, 140, 140);  } 
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0,0">
@@ -36,13 +36,13 @@
     <number>0</number>
    </property>
    <property name="topMargin">
-    <number>0</number>
+    <number>2</number>
    </property>
    <property name="rightMargin">
     <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>2</number>
+    <number>0</number>
    </property>
    <item>
     <widget class="QFrame" name="frameCoinControl">
@@ -59,7 +59,8 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QFrame { border: 0; }
+      </string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -143,8 +144,7 @@
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(140, 140, 140);
-background-color: rgb(20, 20, 20);</string>
+             <string notr="true">color: rgb(140, 140, 140); background-color: rgb(20, 20, 20);</string>
             </property>
             <property name="text">
              <string>Inputs...</string>
@@ -632,8 +632,7 @@ background-color: rgb(20, 20, 20);</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(170, 170, 170);
-background-color: rgb(26, 26, 26);</string>
+             <string notr="true">color: rgb(170, 170, 170); background-color: rgb(26, 26, 26); border: 0;</string>
             </property>
            </widget>
           </item>
@@ -685,7 +684,7 @@ background-color: rgb(26, 26, 26);</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/icons/sendcoin_background);</string>
+      <string notr="true">background-image: url(:/icons/sendcoin_background); border: 0;</string>
      </property>
      <property name="widgetResizable">
       <bool>true</bool>
@@ -695,7 +694,7 @@ background-color: rgb(26, 26, 26);</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>830</width>
+        <width>832</width>
         <height>68</height>
        </rect>
       </property>
@@ -751,7 +750,8 @@ background-color: rgb(26, 26, 26);</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:#0B0B0B;</string>
+      <string notr="true">background-color:#0B0B0B;
+border: 0;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -764,16 +764,16 @@ background-color: rgb(26, 26, 26);</string>
        <number>0</number>
       </property>
       <property name="leftMargin">
-       <number>0</number>
+       <number>20</number>
       </property>
       <property name="topMargin">
-       <number>0</number>
+       <number>20</number>
       </property>
       <property name="rightMargin">
-       <number>0</number>
+       <number>20</number>
       </property>
       <property name="bottomMargin">
-       <number>0</number>
+       <number>20</number>
       </property>
       <item>
        <layout class="QVBoxLayout" name="verticalLayoutFee2" stretch="0,0,0">
@@ -784,7 +784,13 @@ background-color: rgb(26, 26, 26);</string>
          <number>10</number>
         </property>
         <property name="topMargin">
-         <number>0</number>
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
         </property>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayoutFee1">
@@ -851,12 +857,29 @@ background-color: rgb(26, 26, 26);</string>
               </item>
               <item>
                <widget class="QPushButton" name="buttonChooseFee">
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">color: rgb(140, 140, 140);
 background-color: rgb(20, 20, 20);</string>
                 </property>
                 <property name="text">
                  <string>Choose...</string>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>16</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -918,6 +941,11 @@ background-color: rgb(20, 20, 20);</string>
           </item>
           <item>
            <widget class="QPushButton" name="buttonMinimizeFee">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
             <property name="toolTip">
              <string>collapse fee-settings</string>
             </property>

@@ -19,7 +19,8 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog { border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); background-color:#121212;  } </string>
+   <string notr="true">QDialog { background-color:#121212; border: 0;  } 
+</string>
   </property>
   <property name="pixmap" stdset="0">
    <pixmap resource="../bitcoin.qrc">:/icons/sendcoin_background</pixmap>
@@ -67,8 +68,13 @@
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>50</height>
+       <height>0</height>
       </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 170, 170); background-color: rgb(18, 18, 18);</string>

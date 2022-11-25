@@ -6,16 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>696</width>
+    <width>832</width>
     <height>490</height>
    </rect>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel { border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0));  } 
-</string>
+   <string notr="true">border-bottom: 1.4px solid #414141; border-top: 1.4px solid #0A0A0A; border-bottom-color: qlineargradient(x1:0, y1:0, x2:0, y2:0.8, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0)); border-top-color: qlineargradient(x1:0, y1:1, x2:0, y2:0, stop: 0 rgba(255,212,39,0.5), stop: 1 rgba(10,10,10,1.0));</string>
   </property>
   <property name="pixmap">
    <pixmap resource="../bitcoin.qrc">:/icons/sendcoin_background</pixmap>
@@ -36,7 +35,7 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel { border-bottom: 0px solid; border-top: 0px solid;  } 
+      <string notr="true"> border-bottom: 0px solid; border-top: 0px solid; 
 </string>
      </property>
      <property name="frameShape">
@@ -147,8 +146,13 @@ background-color: rgb(26, 26, 26);</string>
               <height>0</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(140, 140, 140);
+             <string notr="true">color: rgb(255, 200, 0);
 background-color: rgb(20, 20, 20);</string>
             </property>
             <property name="text">
@@ -303,14 +307,21 @@ background-color: rgb(26, 26, 26);</string>
    </item>
    <item>
     <widget class="QFrame" name="frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
-      <string notr="true">QLabel { border-bottom: 0px solid; border-top: 0px solid;  } ;</string>
+      <string notr="true">border:0;
+</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -421,6 +432,8 @@ background-color: rgb(20, 20, 20);</string>
     </widget>
    </item>
   </layout>
+  <zorder>frame</zorder>
+  <zorder>frame2</zorder>
  </widget>
  <customwidgets>
   <customwidget>
