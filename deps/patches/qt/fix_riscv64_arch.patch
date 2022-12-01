@@ -1,7 +1,7 @@
-diff --git a/qtbase/fennec/3rdparty/double-conversion/include/double-conversion/utils.h b/qtbase/fennec/3rdparty/double-conversion/include/double-conversion/utils.h
+diff --git a/qtbase/src/3rdparty/double-conversion/include/double-conversion/utils.h b/qtbase/src/3rdparty/double-conversion/include/double-conversion/utils.h
 index 20bfd36..93729fa 100644
---- a/qtbase/fennec/3rdparty/double-conversion/include/double-conversion/utils.h
-+++ b/qtbase/fennec/3rdparty/double-conversion/include/double-conversion/utils.h
+--- a/qtbase/src/3rdparty/double-conversion/include/double-conversion/utils.h
++++ b/qtbase/src/3rdparty/double-conversion/include/double-conversion/utils.h
 @@ -65,7 +65,8 @@
      defined(__sparc__) || defined(__sparc) || defined(__s390__) || \
      defined(__SH4__) || defined(__alpha__) || \

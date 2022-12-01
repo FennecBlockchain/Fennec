@@ -4,13 +4,13 @@ Date: Sat, 30 Jun 2018 09:44:58 -0400
 Subject: [PATCH] fix build with older mingw64
 
 ---
- fennec/windows.hpp | 7 +++++++
+ src/windows.hpp | 7 +++++++
  1 file changed, 7 insertions(+)
 
-diff --git a/fennec/windows.hpp b/fennec/windows.hpp
+diff --git a/src/windows.hpp b/src/windows.hpp
 index 6c3839fd..2c32ec79 100644
---- a/fennec/windows.hpp
-+++ b/fennec/windows.hpp
+--- a/src/windows.hpp
++++ b/src/windows.hpp
 @@ -58,6 +58,13 @@
  #include <winsock2.h>
  #include <windows.h>

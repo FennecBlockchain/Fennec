@@ -1,5 +1,5 @@
---- old/qtbase/fennec/tools/rcc/rcc.cpp
-+++ new/qtbase/fennec/tools/rcc/rcc.cpp
+--- old/qtbase/src/tools/rcc/rcc.cpp
++++ new/qtbase/src/tools/rcc/rcc.cpp
 @@ -207,7 +207,11 @@ void RCCFileInfo::writeDataInfo(RCCResourceLibrary &lib)
      if (lib.formatVersion() >= 2) {
          // last modified time stamp

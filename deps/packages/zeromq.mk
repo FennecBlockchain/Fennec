@@ -24,7 +24,7 @@ define $(package)_config_cmds
 endef
 
 define $(package)_build_cmds
-  $(MAKE) fennec/libzmq.la
+  $(MAKE) src/libzmq.la
 endef
 
 define $(package)_stage_cmds

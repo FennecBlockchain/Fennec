@@ -1,5 +1,5 @@
---- x/qtbase/fennec/plugins/platforms/cocoa/qprintengine_mac_p.h
-+++ y/qtbase/fennec/plugins/platforms/cocoa/qprintengine_mac_p.h
+--- x/qtbase/src/plugins/platforms/cocoa/qprintengine_mac_p.h
++++ y/qtbase/src/plugins/platforms/cocoa/qprintengine_mac_p.h
 @@ -52,6 +52,7 @@
  //
 
@@ -8,8 +8,8 @@
 
  #ifndef QT_NO_PRINTER
 
---- x/qtbase/fennec/plugins/plugins.pro
-+++ y/qtbase/fennec/plugins/plugins.pro
+--- x/qtbase/src/plugins/plugins.pro
++++ y/qtbase/src/plugins/plugins.pro
 @@ -8,6 +8,3 @@ qtHaveModule(gui) {
      qtConfig(imageformatplugin): SUBDIRS *= imageformats
      !android:qtConfig(library): SUBDIRS *= generic

@@ -1,5 +1,5 @@
---- old/qtbase/fennec/gui/configure.pri	2018-06-06 17:28:10.000000000 -0400
-+++ new/qtbase/fennec/gui/configure.pri	2018-08-17 18:43:01.589384567 -0400
+--- old/qtbase/src/gui/configure.pri	2018-06-06 17:28:10.000000000 -0400
++++ new/qtbase/src/gui/configure.pri	2018-08-17 18:43:01.589384567 -0400
 @@ -43,18 +43,11 @@
  }
 

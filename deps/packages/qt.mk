@@ -151,10 +151,10 @@ define $(package)_extract_cmds
 endef
 
 define $(package)_preprocess_cmds
-  sed -i.old "s|FT_Get_Font_Format|FT_Get_X11_Font_Format|" qtbase/fennec/platformsupport/fontdatabases/freetype/qfontengine_ft.cpp && \
+  sed -i.old "s|FT_Get_Font_Format|FT_Get_X11_Font_Format|" qtbase/src/platformsupport/fontdatabases/freetype/qfontengine_ft.cpp && \
   sed -i.old "s|updateqm.commands = \$$$$\$$$$LRELEASE|updateqm.commands = $($(package)_extract_dir)/qttools/bin/lrelease|" qttranslations/translations/translations.pro && \
   sed -i.old "/updateqm.depends =/d" qttranslations/translations/translations.pro && \
-  sed -i.old "s/fennec_plugins.depends = src_sql src_network/fennec_plugins.depends = src_network/" qtbase/fennec/fennec.pro && \
+  sed -i.old "s/src_plugins.depends = src_sql src_network/src_plugins.depends = src_network/" qtbase/src/src.pro && \
   sed -i.old -e 's/if \[ "$$$$XPLATFORM_MAC" = "yes" \]; then xspecvals=$$$$(macSDKify/if \[ "$$$$BUILD_ON_MAC" = "yes" \]; then xspecvals=$$$$(macSDKify/' -e 's|/bin/pwd|pwd|' qtbase/configure && \
   mkdir -p qtbase/mkspecs/macx-clang-linux &&\
   cp -f qtbase/mkspecs/macx-clang/Info.plist.lib qtbase/mkspecs/macx-clang-linux/ &&\
@@ -191,24 +191,24 @@ define $(package)_config_cmds
   $(MAKE) sub-src-clean && \
   cd ../qttranslations && ../qtbase/bin/qmake qttranslations.pro -o Makefile && \
   cd translations && ../../qtbase/bin/qmake translations.pro -o Makefile && cd ../.. && \
-  cd qttools/fennec/linguist/lrelease/ && ../../../../qtbase/bin/qmake lrelease.pro -o Makefile && \
+  cd qttools/src/linguist/lrelease/ && ../../../../qtbase/bin/qmake lrelease.pro -o Makefile && \
   cd ../lupdate/ && ../../../../qtbase/bin/qmake lupdate.pro -o Makefile && cd ../../../..
 endef
 
 define $(package)_build_cmds
   $(MAKE) -C src $(addprefix sub-,$($(package)_qt_libs)) && \
-  $(MAKE) -C ../qttools/fennec/linguist/lrelease && \
-  $(MAKE) -C ../qttools/fennec/linguist/lupdate && \
+  $(MAKE) -C ../qttools/src/linguist/lrelease && \
+  $(MAKE) -C ../qttools/src/linguist/lupdate && \
   $(MAKE) -C ../qttranslations
 endef
 
 define $(package)_stage_cmds
   $(MAKE) -C src INSTALL_ROOT=$($(package)_staging_dir) $(addsuffix -install_subtargets,$(addprefix sub-,$($(package)_qt_libs))) && cd .. && \
-  $(MAKE) -C qttools/fennec/linguist/lrelease INSTALL_ROOT=$($(package)_staging_dir) install_target && \
-  $(MAKE) -C qttools/fennec/linguist/lupdate INSTALL_ROOT=$($(package)_staging_dir) install_target && \
+  $(MAKE) -C qttools/src/linguist/lrelease INSTALL_ROOT=$($(package)_staging_dir) install_target && \
+  $(MAKE) -C qttools/src/linguist/lupdate INSTALL_ROOT=$($(package)_staging_dir) install_target && \
   $(MAKE) -C qttranslations INSTALL_ROOT=$($(package)_staging_dir) install_subtargets && \
-  if `test -f qtbase/fennec/plugins/platforms/xcb/xcb-static/libxcb-static.a`; then \
-    cp qtbase/fennec/plugins/platforms/xcb/xcb-static/libxcb-static.a $($(package)_staging_prefix_dir)/lib; \
+  if `test -f qtbase/src/plugins/platforms/xcb/xcb-static/libxcb-static.a`; then \
+    cp qtbase/src/plugins/platforms/xcb/xcb-static/libxcb-static.a $($(package)_staging_prefix_dir)/lib; \
   fi
 endef
 

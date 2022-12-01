@@ -5,13 +5,13 @@ Subject: [PATCH] Wrap xlib related code blocks in #if's
 
 They are not necessary to compile QT.
 ---
- qtbase/fennec/plugins/platforms/xcb/qxcbcursor.cpp | 8 ++++++++
+ qtbase/src/plugins/platforms/xcb/qxcbcursor.cpp | 8 ++++++++
  1 file changed, 8 insertions(+)
 
-diff --git a/qtbase/fennec/plugins/platforms/xcb/qxcbcursor.cpp b/qtbase/fennec/plugins/platforms/xcb/qxcbcursor.cpp
+diff --git a/qtbase/src/plugins/platforms/xcb/qxcbcursor.cpp b/qtbase/src/plugins/platforms/xcb/qxcbcursor.cpp
 index 7c62c2e2b3..c05c6c0a07 100644
---- a/qtbase/fennec/plugins/platforms/xcb/qxcbcursor.cpp
-+++ b/qtbase/fennec/plugins/platforms/xcb/qxcbcursor.cpp
+--- a/qtbase/src/plugins/platforms/xcb/qxcbcursor.cpp
++++ b/qtbase/src/plugins/platforms/xcb/qxcbcursor.cpp
 @@ -49,7 +49,9 @@
  #include <QtGui/QWindow>
  #include <QtGui/QBitmap>
