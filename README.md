@@ -45,9 +45,9 @@ Links:
 
 • [Mining Pool](https://mine.fennecblockchain.com)
 
-• [Web Wallet](https://fennecwallet.com) (soon)
+• [Web Wallet](https://fennecwallet.com)
 
-
+• [Android Wallet](https://play.google.com/store/apps/details?id=com.fennec.wallet)
 
 
 ---
