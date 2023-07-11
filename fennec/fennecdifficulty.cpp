@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
-// 2022 Fennec Developers - TylerAnderson T.A
+// 2022 Fennec Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,11 +12,11 @@
 #include <util.h>
 
 
-unsigned int static FennecDifficulty(const CBlockIndex* pindexLast, const Consensus::Params& params); 
+unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consensus::Params& params); 
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
-    return FennecDifficulty(pindexLast,params);
+    return DarkGravityWave(pindexLast,params);
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
 
     if (pindexLast == NULL)
@@ -100,7 +100,8 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     return true;
 }
 
-unsigned int static FennecDifficulty(const CBlockIndex* pindexLast, const Consensus::Params& params) {
+unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consensus::Params& params) {
+    /* current difficulty formula, dash - DarkGravity v3, written by Evan Duffield - evan@dash.org */
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
     int64_t nPastBlocks = 24;
     if (!pindexLast || pindexLast->nHeight <= nPastBlocks) {

@@ -11,7 +11,7 @@
 
 
 // Copyright (c) 2010 Satoshi Nakamoto
-// Fennec Developers - TylerAnderson T.A
+// Fennec Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -112,15 +112,14 @@ public:
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nPowTRDHeight = 0;
         consensus.nRuleChangeActivationThreshold = 3600;
         consensus.nMinerConfirmationWindow = 4800;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
 
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000436c0fc2ebc");
-        consensus.defaultAssumeValid = uint256S("0x14f67a926ccf14d86800b20b82f9e63d851583e3026675c16a007555b2f1c371");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000011c31d5657c5");
+        consensus.defaultAssumeValid = uint256S("0xeb724d08d8a417017d9f6989d76e806c9bb42187f33a806c3be5d522b6249710");
 
         pchMessageStart[0] = 0xb1;
         pchMessageStart[1] = 0xb1;
@@ -178,11 +177,13 @@ public:
                 {15358, uint256S("0x3c9bd73006ef65d18270f31370d898a59af8038aa5e70f26b94b9467cc6c74b3")},
                 {23941, uint256S("0x692ce07a59ffece1469fca3b3dce33373abbfb8c350fc3204b4deb4faeccb77e")},
                 {31270, uint256S("0x14f67a926ccf14d86800b20b82f9e63d851583e3026675c16a007555b2f1c371")},
-
+                {53525, uint256S("0xb825e2f54a041d81968aec6e5373f232b467c2ad1328cc03352f9f287e034a5c")},
+                {81721, uint256S("0x60aa326f4e457b92ad99a4fdcead280bcdf7017cd4ebdd504b05bb3e303e118c")},
+                {126656, uint256S("0xeb724d08d8a417017d9f6989d76e806c9bb42187f33a806c3be5d522b6249710")},
             }
         };
 
-        chainTxData = ChainTxData{ 1673961571, 52866, 0.01072939};
+        chainTxData = ChainTxData{ 1689006750, 202267, 0.01012669};
     }
 };
 

@@ -558,31 +558,52 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_EXPLORER= "<https://scan.fennecblockchain.com>";
     const std::string URL_WEBSITE = "<https://fennecblockchain.com>";
+    const std::string URL_LINKTREE = "<https://linktr.ee/FennecBlockchain>";
+    const std::string URL_TELEGRAM = "<https://t.me/FennecPortal>";
+    const std::string URL_DISCORD = "<https://discord.gg/HUepGGUKW4>";
+    const std::string URL_TWITTER = "<https://twitter.com/Fennec_Crypto>";
+    const std::string URL_EXPLORER = "<https://scan.fennecblockchain.com>";
     const std::string URL_MININGPOOL = "<https://mine.fennecblockchain.com>";
     const std::string URL_WEBWALLET = "<https://fennecwallet.com>";
-    const std::string URL_TELEGRAM = "<https://t.me/FennecPortal>";
+    const std::string URL_ANDROID = "<https://play.google.com/store/apps/details?id=com.fennec.wallet>";
+
 
        return     "\n" +
            strprintf(_("Official website %s").translated,
                URL_WEBSITE) +
            "\n" +
            "\n" +
-           strprintf(_("Block explorer: %s").translated,
-               URL_EXPLORER) +
-           "\n" +
-           "\n" +
-           strprintf(_("Mining pool: %s").translated,
-               URL_MININGPOOL) +
+           strprintf(_("LinkTree: %s").translated,
+               URL_LINKTREE) +
            "\n" +
            "\n" +
            strprintf(_("Telegram: %s").translated,
                URL_TELEGRAM) +
            "\n" +
            "\n" +
-           strprintf(_("Web wallet (soon): %s").translated,
+           strprintf(_("Discord: %s").translated,
+               URL_DISCORD) +
+           "\n" +
+           "\n" +
+           strprintf(_("Twitter: %s").translated,
+               URL_TWITTER) +
+           "\n" +
+           "\n" +
+           strprintf(_("Explorer: %s").translated,
+               URL_EXPLORER) +
+           "\n" +
+           "\n" +
+           strprintf(_("Mining Pool: %s").translated,
+               URL_MININGPOOL) +
+           "\n" +
+           "\n" +
+           strprintf(_("Web Wallet: %s").translated,
                URL_WEBWALLET) +
+           "\n" +
+           "\n" +
+           strprintf(_("Android: %s").translated,
+               URL_ANDROID) +
            "\n" +
            "\n" +
            "\n";

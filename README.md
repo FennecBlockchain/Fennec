@@ -1,4 +1,4 @@
-﻿![](share/pixmaps/splashscreen_github_2048_3.png)
+![](share/pixmaps/splashscreen_github_2048_3.png)
 
 
 Specifications:
@@ -16,7 +16,7 @@ Specifications:
 
 • Prefix: FNNC adresses start with "F"  
 
-• Uses the "FennecDifficulty" (FD) difficulty algorithm for a more stable POW mining on the network
+• Uses the DarkGravity v3 (written by Evan Duffield) difficulty algorithm for a more stable POW mining on the network
 
 
 ---

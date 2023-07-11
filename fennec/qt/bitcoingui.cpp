@@ -85,6 +85,12 @@ BitcoinGUI::BitcoinGUI(interfaces::Node& node, const PlatformStyle *_platformSty
         move(QGuiApplication::primaryScreen()->availableGeometry().center() - frameGeometry().center());
     }
 
+
+
+    this->setFixedSize(QSize(832, 603));
+    this->statusBar()->setSizeGripEnabled(false);
+
+
 #ifdef ENABLE_WALLET
     enableWallet = WalletModel::isWalletEnabled();
 #endif // ENABLE_WALLET
@@ -135,6 +141,115 @@ BitcoinGUI::BitcoinGUI(interfaces::Node& node, const PlatformStyle *_platformSty
     statusBar();
     statusBar()->setStyleSheet("QWidget { background-color: #0B0B0B; font-weight:bold; text-align:center; font-family: Arial, sans-recif; font-size: 9px; text-transform: uppercase; color: #A5A5A5;} ");
 
+ // Social icons
+    QFrame* frameSocial = new QFrame();
+    frameSocial->setContentsMargins(0, 0, 0, 0);
+    frameSocial->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    QHBoxLayout* frameSocialLayout = new QHBoxLayout(frameSocial);
+    frameSocialLayout->setContentsMargins(8, 0, 8, 0);
+    frameSocialLayout->setSpacing(8);
+
+    QLabel* website = new QLabel();
+    website->setObjectName(QStringLiteral("website"));
+    website->setMinimumSize(QSize(36, 36));
+    website->setMaximumSize(QSize(36, 36));
+    website->setBaseSize(QSize(0, 0));
+    website->setCursor(QCursor(Qt::PointingHandCursor));
+    website->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    website->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    website->setToolTip(QApplication::translate("OverviewPage", "Website", nullptr));
+#endif // QT_NO_TOOLTIP
+    website->setText(QApplication::translate("OverviewPage", "<a href=\"https://fennecblockchain.com\"><img src=\":/icons/website\" width=\"36\" height=\"36\"></a>", nullptr));
+
+    QLabel* linktree = new QLabel();
+    linktree->setObjectName(QStringLiteral("linktree"));
+    linktree->setMinimumSize(QSize(36, 36));
+    linktree->setMaximumSize(QSize(36, 36));
+    linktree->setBaseSize(QSize(0, 0));
+    linktree->setCursor(QCursor(Qt::PointingHandCursor));
+    linktree->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    linktree->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    linktree->setToolTip(QApplication::translate("OverviewPage", "LinkTree", nullptr));
+#endif // QT_NO_TOOLTIP
+    linktree->setText(QApplication::translate("OverviewPage", "<a href=\"https://linktr.ee/FennecBlockchain\"><img src=\":/icons/linktree\" width=\"36\" height=\"36\"></a>", nullptr));
+
+    QLabel* telegram = new QLabel();
+    telegram->setObjectName(QStringLiteral("telegram"));
+    telegram->setMinimumSize(QSize(36, 36));
+    telegram->setMaximumSize(QSize(36, 36));
+    telegram->setBaseSize(QSize(0, 0));
+    telegram->setCursor(QCursor(Qt::PointingHandCursor));
+    telegram->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    telegram->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    telegram->setToolTip(QApplication::translate("OverviewPage", "Telegram", nullptr));
+#endif // QT_NO_TOOLTIP
+    telegram->setText(QApplication::translate("OverviewPage", "<a href=\"https://t.me/FennecPortal\"><img src=\":/icons/telegram\" width=\"36\" height=\"36\"></a>", nullptr));
+
+    QLabel* discord = new QLabel();
+    discord->setObjectName(QStringLiteral("discord"));
+    discord->setMinimumSize(QSize(36, 36));
+    discord->setMaximumSize(QSize(36, 36));
+    discord->setBaseSize(QSize(0, 0));
+    discord->setCursor(QCursor(Qt::PointingHandCursor));
+    discord->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    discord->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    discord->setToolTip(QApplication::translate("OverviewPage", "Discord", nullptr));
+#endif // QT_NO_TOOLTIP
+    discord->setText(QApplication::translate("OverviewPage", "<a href=\"https://discord.gg/HUepGGUKW4\"><img src=\":/icons/discord\" width=\"36\" height=\"36\"></a>", nullptr));
+
+    QLabel* twitter = new QLabel();
+    twitter->setObjectName(QStringLiteral("twitter"));
+    twitter->setMinimumSize(QSize(36, 36));
+    twitter->setMaximumSize(QSize(36, 36));
+    twitter->setBaseSize(QSize(0, 0));
+    twitter->setCursor(QCursor(Qt::PointingHandCursor));
+    twitter->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    twitter->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    twitter->setToolTip(QApplication::translate("OverviewPage", "Twitter", nullptr));
+#endif // QT_NO_TOOLTIP
+    twitter->setText(QApplication::translate("OverviewPage", "<a href=\"https://twitter.com/Fennec_Crypto\"><img src=\":/icons/twitter\" width=\"36\" height=\"36\"></a>", nullptr));
+
+    QLabel* explorer = new QLabel();
+    explorer->setObjectName(QStringLiteral("explorer"));
+    explorer->setMinimumSize(QSize(36, 36));
+    explorer->setMaximumSize(QSize(36, 36));
+    explorer->setBaseSize(QSize(0, 0));
+    explorer->setCursor(QCursor(Qt::PointingHandCursor));
+    explorer->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    explorer->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    explorer->setToolTip(QApplication::translate("OverviewPage", "Block Explorer", nullptr));
+#endif // QT_NO_TOOLTIP
+    explorer->setText(QApplication::translate("OverviewPage", "<a href=\"https://scan.fennecblockchain.com\"><img src=\":/icons/explorer\" width=\"36\" height=\"36\"></a>", nullptr));
+
+
+    QLabel* pool= new QLabel();
+    pool->setObjectName(QStringLiteral("pool"));
+    pool->setMinimumSize(QSize(36, 36));
+    pool->setMaximumSize(QSize(36, 36));
+    pool->setBaseSize(QSize(0, 0));
+    pool->setCursor(QCursor(Qt::PointingHandCursor));
+    pool->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+    pool->setOpenExternalLinks(true);
+#ifndef QT_NO_TOOLTIP
+    pool->setToolTip(QApplication::translate("OverviewPage", "Mining Pool", nullptr));
+#endif // QT_NO_TOOLTIP
+    pool->setText(QApplication::translate("OverviewPage", "<a href=\"https://mine.fennecblockchain.com\"><img src=\":/icons/pool\" width=\"36\" height=\"36\"></a>", nullptr));
+
+
+    frameSocialLayout->addWidget(website);
+    frameSocialLayout->addWidget(linktree);
+    frameSocialLayout->addWidget(telegram);
+    frameSocialLayout->addWidget(discord);
+    frameSocialLayout->addWidget(twitter);
+    frameSocialLayout->addWidget(explorer);
+    frameSocialLayout->addWidget(pool);
+
     // Disable size grip because it looks ugly and nobody needs it
     statusBar()->setSizeGripEnabled(false);
 
@@ -179,6 +294,7 @@ BitcoinGUI::BitcoinGUI(interfaces::Node& node, const PlatformStyle *_platformSty
     // See https://doc.qt.io/qt-5/gallery.html
         progressBar->setStyleSheet("QProgressBar { background-color: #141414; font-size: 0px; font-family: Diversa Sans Com Black, sans-recif; font-weight: normal; max-height: 2px; color: transparent; border: 1px solid grey; border-radius: 10px; padding: 1px; text-align: center; min-width: 400px; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #212121, stop: 1 #FFC600); font-size: 0px; border-radius: 14px; margin: 0px; max-height: 2px; min-width: 400px; } ");
 
+    statusBar()->addWidget(frameSocial);
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
@@ -1319,8 +1435,8 @@ bool BitcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 
 void BitcoinGUI::setHDStatus(bool privkeyDisabled, int hdEnabled)
 {
-    labelWalletHDStatusIcon->setPixmap(platformStyle->SingleColorIcon(privkeyDisabled ? ":/icons/eye" : hdEnabled ? ":/icons/hd_enabled" : ":/icons/hd_disabled").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelWalletHDStatusIcon->setToolTip(privkeyDisabled ? tr("Private key <b>disabled</b>") : hdEnabled ? tr("HD key generation is <b>enabled</b>") : tr("HD key generation is <b>disabled</b>"));
+//    labelWalletHDStatusIcon->setPixmap(platformStyle->SingleColorIcon(privkeyDisabled ? ":/icons/eye" : hdEnabled ? ":/icons/hd_enabled" : ":/icons/hd_disabled").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+//    labelWalletHDStatusIcon->setToolTip(privkeyDisabled ? tr("Private key <b>disabled</b>") : hdEnabled ? tr("HD key generation is <b>enabled</b>") : tr("HD key generation is <b>disabled</b>"));
 
     // eventually disable the QLabel to set its opacity to 50%
     labelWalletHDStatusIcon->setEnabled(hdEnabled);

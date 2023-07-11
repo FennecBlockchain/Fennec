@@ -82,6 +82,13 @@
 	<file alias="receive2">res/icons/receive_2.png</file>
 	<file alias="receive0">res/icons/receive_0.png</file>
 	<file alias="mrgrey">res/icons/mrgrey.png</file>
+	<file alias="website">res/icons/website.png</file>
+	<file alias="linktree">res/icons/linktree.png</file>
+	<file alias="telegram">res/icons/telegram.png</file>
+	<file alias="discord">res/icons/discord.png</file>
+	<file alias="twitter">res/icons/twitter.png</file>
+	<file alias="explorer">res/icons/explorer.png</file>
+	<file alias="pool">res/icons/pool.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
