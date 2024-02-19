@@ -570,9 +570,6 @@ std::string LicenseInfo()
 
 
        return     "\n" +
-           strprintf(_("\nCopyright (C) %i-%i The Fennec Blockchain developers").translated, 2022, COPYRIGHT_YEAR) +
-           "\n" +
-           "\n" +
            strprintf(_("Official website %s").translated,
                URL_WEBSITE) +
            "\n" +
