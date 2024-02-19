@@ -11,7 +11,7 @@
 
 
 // Copyright (c) 2010 Satoshi Nakamoto
-// Fennec Developers
+// Copyright (c) 2022-2024 Fennec Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -117,9 +117,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
-
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000011c31d5657c5");
-        consensus.defaultAssumeValid = uint256S("0xeb724d08d8a417017d9f6989d76e806c9bb42187f33a806c3be5d522b6249710");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000001c57d4034d38");
+        consensus.defaultAssumeValid = uint256S("0x85498d4e017142985599180b478a01a427a34f36f7cbb593efa3e4da3b755e3f");
 
         pchMessageStart[0] = 0xb1;
         pchMessageStart[1] = 0xb1;
@@ -180,10 +179,12 @@ public:
                 {53525, uint256S("0xb825e2f54a041d81968aec6e5373f232b467c2ad1328cc03352f9f287e034a5c")},
                 {81721, uint256S("0x60aa326f4e457b92ad99a4fdcead280bcdf7017cd4ebdd504b05bb3e303e118c")},
                 {126656, uint256S("0xeb724d08d8a417017d9f6989d76e806c9bb42187f33a806c3be5d522b6249710")},
+                {200000, uint256S("0xf50b8069fd31a63e7d88c7e55bd662df9e3c262a759e9ab939e0d77ffb06cf9b")},
+                {249000, uint256S("0x85498d4e017142985599180b478a01a427a34f36f7cbb593efa3e4da3b755e3f")},
             }
         };
 
-        chainTxData = ChainTxData{ 1689006750, 202267, 0.01012669};
+        chainTxData = ChainTxData{ 1708368327, 371768, 0.00952564};
     }
 };
 
