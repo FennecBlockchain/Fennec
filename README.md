@@ -14,7 +14,7 @@ Specifications:
 
 • Adopts Segwit and CSV technology
 
-• Prefix: FNNC adresses start with "F"  
+• Prefix: FNNC adresses start with "F" and "fennec"
 
 • Uses the DarkGravity v3 (written by Evan Duffield) difficulty algorithm for a more stable POW mining on the network
 
