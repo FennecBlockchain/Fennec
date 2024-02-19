@@ -1294,7 +1294,7 @@ bool AppInitMain(InitInterfaces& interfaces)
                                     "port=8338\n"
                                     "rpcport=8339\n"
                                     "rpcbind=127.0.0.1\n"
-                                    "maxconnections=20\n"
+                                    "maxconnections=50\n"
                                     "fallbackfee=0.0001\n"
                                     "rpcallowip=127.0.0.1\n"
                                     "deprecatedrpc=accounts\n"
@@ -1306,6 +1306,13 @@ bool AppInitMain(InitInterfaces& interfaces)
                                     "addnode=seed4.fennecblockchain.com\n"
                                     "addnode=seed5.fennecblockchain.com\n"
                                     "addnode=seed6.fennecblockchain.com\n"
+                                    "addnode=107.191.39.92\n"
+                                    "addnode=65.21.134.181\n"
+                                    "addnode=149.28.168.59\n"
+                                    "addnode=193.108.117.181\n"
+                                    "addnode=144.202.5.148\n"
+                                    "addnode=192.248.145.29\n"
+                                    "addnode=207.246.104.64\n"
                                     "\n";
             fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
             fclose(configFile);
