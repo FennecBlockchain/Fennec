@@ -52,7 +52,7 @@ Links:
 
 ---
 
-
+![](https://github.com/koh-gt/fennec/blob/main/share/pixmaps/512.png?raw=true)
 
 License
 -------
