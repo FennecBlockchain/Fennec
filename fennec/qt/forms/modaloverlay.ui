@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>370</height>
+    <width>840</width>
+    <height>490</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,24 +35,63 @@
       <string notr="true">#bgWidget { background: rgba(0,0,0,240); }</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayoutMain" stretch="1">
+      <property name="spacing">
+       <number>7</number>
+      </property>
       <property name="leftMargin">
-       <number>60</number>
+       <number>40</number>
       </property>
       <property name="topMargin">
-       <number>60</number>
+       <number>40</number>
       </property>
       <property name="rightMargin">
-       <number>60</number>
+       <number>40</number>
       </property>
       <property name="bottomMargin">
-       <number>60</number>
+       <number>40</number>
       </property>
       <item>
        <widget class="QLabel" name="contentWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="styleSheet">
          <string notr="true">#contentWidget { background: rgba(255,255,255,240); border-radius: 6px; }
 
 QLabel { color: rgb(40,40,40);  }</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
         </property>
         <property name="pixmap">
          <pixmap resource="../bitcoin.qrc">:/icons/modal_background</pixmap>
@@ -62,6 +101,9 @@ QLabel { color: rgb(40,40,40);  }</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse</set>
         </property>
         <layout class="QVBoxLayout" name="verticalLayoutSub" stretch="1,0,0,0">
          <property name="spacing">
@@ -135,6 +177,9 @@ QLabel { color: rgb(40,40,40);  }</string>
              </property>
              <property name="topMargin">
               <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>10</number>
              </property>
              <item>
               <widget class="QLabel" name="infoText">
@@ -359,6 +404,46 @@ QLabel { color: rgb(40,40,40);  }</string>
              </item>
             </layout>
            </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="labelProgressIncrease">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="visible">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(100, 100, 100);</string>
+             </property>
+             <property name="text">
+              <string>Progress increase per hour</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="progressIncreasePerH">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="visible">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(100, 100, 100);</string>
+             </property>
+             <property name="text">
+              <string>calculating...</string>
+             </property>
+            </widget>
+           </item>
            <item row="5" column="0">
             <widget class="QLabel" name="labelEstimatedTimeLeft">
              <property name="font">
@@ -379,40 +464,6 @@ QLabel { color: rgb(40,40,40);  }</string>
            </item>
            <item row="5" column="1">
             <widget class="QLabel" name="expectedTimeLeft">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(100, 100, 100);</string>
-             </property>
-             <property name="text">
-              <string>calculating...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="labelProgressIncrease">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>10</pointsize>
-               <weight>50</weight>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(100, 100, 100);</string>
-             </property>
-             <property name="text">
-              <string>Progress increase per hour</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLabel" name="progressIncreasePerH">
              <property name="font">
               <font>
                <family>Calibri</family>
